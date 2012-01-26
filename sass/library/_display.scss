@@ -1,0 +1,33 @@
+// Vars
+$font-color:#000;
+
+table {
+
+  thead {
+    th, td { background-color:lighten($font-color, 70%); }
+  }
+}
+
+// helper text
+.helper {
+  display:block;
+  font-size:0.75em;
+  text-transform:normal;
+}
+
+// doc/form title
+.doc-title, .doc-sub-title {
+  text-align:center;
+  text-transform:uppercase;
+
+  .due-by-date {
+    border:2px solid $font-color;
+    font-size:.8em;
+    font-weight:400;
+    padding:.2em .4em;
+  }
+}
+
+.doc-title { margin-bottom:.25em; }
+
+

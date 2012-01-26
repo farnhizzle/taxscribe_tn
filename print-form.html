@@ -8,16 +8,1083 @@
   <![endif]-->
 </head>
 <body>
-  <div id='wrapper'>
-    <div id='gov'>
-      <div id='office-use'></div>
+  <div class='page'>
+    <!-- jurisdiction info -->
+    <div class='section'>
+      <ul id='juris-info'>
+        <li>#[juris_name] #[juris_type} Property Assessor's Office</li>
+        <li>#[juris_address1] #[juris_address2], #[juris_suite]</li>
+        <li>#[juris_city], #[juris_state] #[juris_zip]</li>
+        <li>Phone: #[juris_phone]</li>
+      </ul>
+      <table id='taxyear-info'>
+        <tr>
+          <th>Tax Year</th>
+          <td>#[current_tax_year]</td>
+        </tr>
+        <tr>
+          <th>Account #</th>
+          <td>#[account_number]</td>
+        </tr>
+      </table>
     </div>
-    <div id='biz'>
-      <div id='info'></div>
-      <div id='owned-property'></div>
-      <div id='leased-property'></div>
-      <div id='nonstandard-property'></div>
-      <div id='agree-signature'></div>
+    <!-- document info -->
+    <div class='section'>
+      <h1 class='doc-title'>
+        Tangible Personal Property Schedule
+        <span class='due-by-date'>
+          Due: #[bpp_due_date]
+        </span>
+      </h1>
+      <h2 class='doc-sub-title'>For Reporting Commercial and Industrial Personal Property</h2>
+    </div>
+    <!-- assessor use only -->
+    <div class='section'>
+      <p class='doc-description'>In accordance with T.C.A. 67-5-903, this schedule must be completed, signed on the reverse side and filed with the Assessor of Property on or before March 1. Failure to do so will result in a forced assessment from which there is no appeal except to the #[juris_name] #[juris_type] Board of Equalization.</p>
+      <table id='assessors-use-only'>
+        <thead>
+          <tr>
+            <th colspan='6'>Assessor's Use Only</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Total This Side</th>
+            <td colspan='3'>#[office_use_total_side1]</td>
+            <th>APPR Year</th>
+            <td>#[office_use_appr_year]</td>
+          </tr>
+          <tr>
+            <th>Total Reverse Side</th>
+            <td colspan='3'>#[office_use_total_side2]</td>
+            <th>Card Num</th>
+            <td>#[office_use_card_num]</td>
+          </tr>
+          <tr>
+            <th>Total Attachments</th>
+            <td colspan='3'>#[office_use_total_attachments]</td>
+            <th>Num of Cards</th>
+            <td>#[office_use_num_of_cards]</td>
+          </tr>
+          <tr>
+            <th>Total Appraised Value</th>
+            <td colspan='3'>#[office_use_total_appraised_value]</td>
+            <th>Prop Type</th>
+            <td>#[office_use_prop_type]</td>
+          </tr>
+          <tr>
+            <th>Assessment Ratio</th>
+            <td colspan='3'>#[office_use_assessment_ratio] x .30</td>
+            <th>Ward</th>
+            <td>#[office_use_ward]</td>
+          </tr>
+          <tr>
+            <th>Assessment</th>
+            <td colspan='3'>#[office_use_assessment]</td>
+            <th>City</th>
+            <td>#[office_use_city]</td>
+          </tr>
+          <tr>
+            <th>Asmnt Type:</th>
+            <td>#[office_use_assessment_type]</td>
+            <th>Parcel Status</th>
+            <td>#[office_use_parcel_status]</td>
+            <th>SSD1</th>
+            <td>#[office_use_ssd1]</td>
+          </tr>
+          <tr>
+            <th>Schedule Furnished</th>
+            <td colspan='3'>#[office_use_schedule_furnish_date]</td>
+            <th>SSD2</th>
+            <td>#[office_use_ssd2]</td>
+          </tr>
+          <tr>
+            <th>Schedule Returned</th>
+            <td colspan='3'>#[office_use_schedule_returned_date]</td>
+            <th>Area Code</th>
+            <td>#[office_use_area_code]</td>
+          </tr>
+          <tr>
+            <th>Desk Audited By</th>
+            <td colspan='3'>#[office_use_desk_audit_name]</td>
+            <th>Date</th>
+            <td>#[office_use_desk_audit_name_date]</td>
+          </tr>
+          <tr>
+            <th>Field Audited By</th>
+            <td colspan='3'>#[office_use_field_audit_name]</td>
+            <th>Date</th>
+            <td>#[office_use_field_audit_name_date]</td>
+          </tr>
+          <tr>
+            <th>Business Code</th>
+            <td colspan='5'>#[office_use_business_code]</td>
+          </tr>
+          <tr>
+            <th>Units Type</th>
+            <td colspan='3'>#[office_use_units_type]</td>
+            <th>Number</th>
+            <td>#[office_use_number]</td>
+          </tr>
+          <tr>
+            <th>Appraised $ per Unit</th>
+            <td colspan='5'>#[office_use_appraised_dollar_per_unit]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Part 1 General Data -->
+    <div class='section'>
+      <h3 class='section-title'>
+        Part I. General Data
+        <span class='helper'>(Make changes as needed)</span>
+      </h3>
+      <ul id='business-info'>
+        <li>
+          <span class='label'>Business Owner</span>
+          <span class='input'>#[bpp_business_owner]</span>
+        </li>
+        <li>
+          <span class='label'>Contact Person</span>
+          <span class='input'>#[bpp_business_contact]</span>
+        </li>
+        <li>
+          <span class='label'>State Sales Tax Number</span>
+          <span class='input'>#[bpp_state_sales_tax]</span>
+        </li>
+        <li>
+          <span class='label'>IRS Identification Number</span>
+          <span class='input'>#[bpp_irs_number]</span>
+        </li>
+        <li>
+          <span class='label'>Business License Number</span>
+          <span class='input'>#[bpp_business_license]</span>
+        </li>
+        <li>
+          <span class='label'>Business Phone</span>
+          <span class='input'>#[bpp_business_phone]</span>
+        </li>
+        <li>
+          <span class='label'>Email Address</span>
+          <span class='input'>#[bpp_business_email]</span>
+        </li>
+        <li>
+          <span class='label'>Type of Business</span>
+          <span class='input'>#[bpp_business_type]</span>
+        </li>
+        <li>
+          <span class='label'>How long has this business been in operation?</span>
+          <span class='input'>#[bpp_business_operation_time]</span>
+        </li>
+        <li>
+          <span class='label'>How many vehicles are used in your business?</span>
+          <span class='input'>#[bpp_business_vehicle_total]</span>
+        </li>
+        <li>
+          <span class='label'>How many employees do you employ?</span>
+          <span class='input'>#[bpp_business_employee_total]</span>
+        </li>
+      </ul>
+      <ul id='business-property-info'>
+        <li>
+          <span class='label'>Property Address</span>
+          <span class='input'>#[bpp_business_property_address]</span>
+        </li>
+        <li>
+          <span class='label'>Owner of Real Estate</span>
+          <span class='input'>#[bpp_business_real_estate_owner]</span>
+        </li>
+        <li>
+          <span class='label'>
+            Business Located
+            <span class='helper'>
+              (please check one)
+            </span>
+          </span>
+          <span class='input'>
+            Outside city limits
+            <span class='checkbox'></span>
+            Inside city limits
+            <span class='checkbox'></span>
+          </span>
+        </li>
+        <li>
+          <span class='label'>City</span>
+          <span class='input'>#[bpp_business_city]</span>
+        </li>
+        <li>
+          <span class='label'>Approx sqft of building area used?</span>
+          <span class='input'>#[bpp_business_sqft]</span>
+        </li>
+      </ul>
+    </div>
+    <div class='alert section'>
+      <p>If you were out of business in this county on #[taxyear_end_date], please notify the assessor of property of the date out of business  in order to avoid a forced assessment.</p>
+    </div>
+    <!-- Part 2. Owned Property -->
+    <div class='section'>
+      <h3 class='section-title'>
+        Part II. Owned Personal Property
+        <span class='helper'>Report all personal property owned by you or held for use in your business/profession as of January 1, including items fully depreciated on your accounting records. Do not report inventories of merchandise held for sale or exchange or finished goods in the hands of the manufacturers. Personal property leased or rented and used in your business must be reported in <u>Part 3</u> on the reverse side of this schedule. Property on which you need to report a Nonstandard value must be reported in <u>Part 4</u> on the reverse side of this schedule and not in this section. <strong>A separate schedule must be filed for each business location.</strong> List the original cost to you for each group below, by year acquired, in the REVISED COST column.  An <strong>Asset Listing</strong> should accompany this schedule. This can be faxed to #[juris_fax] or emailed to #[juris_email].</span>
+      </h3>
+      <h3 class='sub-title'>
+        <u>Alternative Reporting for Small Accounts</u>
+        <span class='helper'>If you believe the depreciated value of your property is $1,000 or less, you may use the Small Accounts Certification (reverse side) as an alternative to reporting detail costs below. With this certification, subject to audit, your Assessment will be set at $300.</span>
+      </h3>
+      <div class='alert'>
+        <p>Reverse side of this form must be completed if applicable</p>
+      </div>
+      <table id='business-property'>
+        <tr>
+          <td class='column'>
+            <table>
+              <tr>
+                <td class='column'>
+                  <table id='group-1'>
+                    <thead>
+                      <tr>
+                        <th colspan='4'>Group 1 - Furniture, Fixtures, General Equipment &amp; All Property not in another group</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cost on File</th>
+                        <th>Revised Cost</th>
+                        <th>Depr</th>
+                      </tr>
+                      <tr>
+                        <td>2011</td>
+                        <td class='disabled'></td>
+                        <td></td>
+                        <td>0.88</td>
+                      </tr>
+                      <tr>
+                        <td>2010</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.75</td>
+                      </tr>
+                      <tr>
+                        <td>2009</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.63</td>
+                      </tr>
+                      <tr>
+                        <td>2008</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.50</td>
+                      </tr>
+                      <tr>
+                        <td>2007</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.38</td>
+                      </tr>
+                      <tr>
+                        <td>2006</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.25</td>
+                      </tr>
+                      <tr>
+                        <td>Prior</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <table id='group-2'>
+                    <thead>
+                      <tr>
+                        <th colspan='4'>Group 2 - Computers, Copiers, Peripherals, Fax machines, &amp; Tools</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cost on File</th>
+                        <th>Revised Cost</th>
+                        <th>Depr</th>
+                      </tr>
+                      <tr>
+                        <td>2011</td>
+                        <td class='disabled'></td>
+                        <td></td>
+                        <td>0.67</td>
+                      </tr>
+                      <tr>
+                        <td>2010</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.33</td>
+                      </tr>
+                      <tr>
+                        <td>Prior</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <table id='group-3'>
+                    <thead>
+                      <tr>
+                        <th colspan='4'>Group 3 - Molds, Dies, &amp; Jigs</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cost on File</th>
+                        <th>Revised Cost</th>
+                        <th>Depr</th>
+                      </tr>
+                      <tr>
+                        <td>2011</td>
+                        <td class='disabled'></td>
+                        <td></td>
+                        <td>0.75</td>
+                      </tr>
+                      <tr>
+                        <td>2010</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.50</td>
+                      </tr>
+                      <tr>
+                        <td>2009</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.25</td>
+                      </tr>
+                      <tr>
+                        <td>Prior</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </td>
+                <td class='column'>
+                  <table id='group-4'>
+                    <thead>
+                      <tr>
+                        <th colspan='4'>
+                          Group 4 - Aircraft, Boats, &amp; Towers
+                          <span class='helper'>(not classified as real property)</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cost on File</th>
+                        <th>Revised Cost</th>
+                        <th>Depr</th>
+                      </tr>
+                      <tr>
+                        <td>2011</td>
+                        <td class='disabled'></td>
+                        <td></td>
+                        <td>0.92</td>
+                      </tr>
+                      <tr>
+                        <td>2010</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.85</td>
+                      </tr>
+                      <tr>
+                        <td>2009</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.77</td>
+                      </tr>
+                      <tr>
+                        <td>2008</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.69</td>
+                      </tr>
+                      <tr>
+                        <td>2007</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.62</td>
+                      </tr>
+                      <tr>
+                        <td>2006</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.54</td>
+                      </tr>
+                      <tr>
+                        <td>2005</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.46</td>
+                      </tr>
+                      <tr>
+                        <td>2004</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.38</td>
+                      </tr>
+                      <tr>
+                        <td>2003</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.31</td>
+                      </tr>
+                      <tr>
+                        <td>2002</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.23</td>
+                      </tr>
+                      <tr>
+                        <td>Prior</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <table id='group-5'>
+                    <thead>
+                      <tr>
+                        <th colspan='4'>Group 5 - Manufacturing Machinery</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cost on File</th>
+                        <th>Revised Cost</th>
+                        <th>Depr</th>
+                      </tr>
+                      <tr>
+                        <td>2011</td>
+                        <td class='disabled'></td>
+                        <td></td>
+                        <td>0.88</td>
+                      </tr>
+                      <tr>
+                        <td>2010</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.75</td>
+                      </tr>
+                      <tr>
+                        <td>2009</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.63</td>
+                      </tr>
+                      <tr>
+                        <td>2008</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.50</td>
+                      </tr>
+                      <tr>
+                        <td>2007</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.38</td>
+                      </tr>
+                      <tr>
+                        <td>2006</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.25</td>
+                      </tr>
+                      <tr>
+                        <td>Prior</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </td>
+              </tr>
+              <tr rowspan='2'>
+                <td>
+                  <ul>
+                    <li>Return this schedule and any accompanying data on or before #[bpp_due_date] to:</li>
+                    <li>#[juris_name] #[juris_type} Property Assessor's Office</li>
+                    <li>Attn: Personal Property Section</li>
+                    <li>#[juris_address1] #[juris_address2], #[juris_suite]</li>
+                    <li>#[juris_city], #[juris_state] #[juris_zip]</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td class='column'>
+            <table id='group-6'>
+              <thead>
+                <tr>
+                  <th colspan='4'>
+                    Group 6 - Billboards, Tanks &amp; Pipelines
+                    <span class='helper'>(unless classified as real property)</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Year</th>
+                  <th>Cost on File</th>
+                  <th>Revised Cost</th>
+                  <th>Depr</th>
+                </tr>
+                <tr>
+                  <td>2011</td>
+                  <td class='disabled'></td>
+                  <td></td>
+                  <td>0.94</td>
+                </tr>
+                <tr>
+                  <td>2010</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.88</td>
+                </tr>
+                <tr>
+                  <td>2009</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.81</td>
+                </tr>
+                <tr>
+                  <td>2008</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.75</td>
+                </tr>
+                <tr>
+                  <td>2007</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.69</td>
+                </tr>
+                <tr>
+                  <td>2006</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.63</td>
+                </tr>
+                <tr>
+                  <td>2005</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.56</td>
+                </tr>
+                <tr>
+                  <td>2004</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.50</td>
+                </tr>
+                <tr>
+                  <td>2003</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.44</td>
+                </tr>
+                <tr>
+                  <td>2002</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.38</td>
+                </tr>
+                <tr>
+                  <td>2001</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.31</td>
+                </tr>
+                <tr>
+                  <td>2000</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.25</td>
+                </tr>
+                <tr>
+                  <td>Prior</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.20</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+            <table id='group-7'>
+              <thead>
+                <tr>
+                  <th colspan='4'>Group 7 - Scrap Property</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Year</th>
+                  <th>Cost on File</th>
+                  <th>Revised Cost</th>
+                  <th>Depr</th>
+                </tr>
+                <tr>
+                  <td>All</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.02</td>
+                </tr>
+              </tbody>
+            </table>
+            <table id='group-8'>
+              <thead>
+                <tr>
+                  <th colspan='4'>Group 8 - Raw Materials &amp; Supplies</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th></th>
+                  <th>Cost on File</th>
+                  <th>Revised Cost</th>
+                  <th>Depr</th>
+                </tr>
+                <tr>
+                  <td>Original Cost</td>
+                  <td></td>
+                  <td></td>
+                  <td>1.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <table id='group-9'>
+              <thead>
+                <tr>
+                  <th colspan='4'>Group 9 - Vehicles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Year</th>
+                  <th>Cost on File</th>
+                  <th>Revised Cost</th>
+                  <th>Depr</th>
+                </tr>
+                <tr>
+                  <td>2011</td>
+                  <td class='disabled'></td>
+                  <td></td>
+                  <td>0.80</td>
+                </tr>
+                <tr>
+                  <td>2010</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.60</td>
+                </tr>
+                <tr>
+                  <td>2009</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.40</td>
+                </tr>
+                <tr>
+                  <td>Prior</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.20</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+            <table id='group-10'>
+              <thead>
+                <tr>
+                  <th colspan='4'>Group 10 - Construction in Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Year</th>
+                  <th>Cost on File</th>
+                  <th>Revised Cost</th>
+                  <th>Depr</th>
+                </tr>
+                <tr>
+                  <td>All</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.15</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class='alert'>
+      <p>Print your Name &amp; Title and Sign the Schedule on the Reverse Side</p>
+    </div>
+  </div>
+  <div class='page'>
+    <!-- Part 3. Leased Property -->
+    <div class='section'>
+      <table id='business-leased-property'>
+        <thead>
+          <tr>
+            <th colspan='10'>
+              <h3>
+                Part III. Leased Personal Property
+                <span class='helper'>Report all items leased or rented by you for the conduct of your business as of January 1st, regardless of any contract between the lessor and lessee as to who shall pay the taxes. Leased property is to be assessed to the lessee.</span>
+              </h3>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>GRP</th>
+            <th>Item Dscr, Make, &amp; Model #</th>
+            <th>* Year Made</th>
+            <th>** Cost New</th>
+            <th>Term of Lease &amp; Year Lease Began</th>
+            <th>Depreciated Value</th>
+            <th>Monthly Rent</th>
+            <th>Name of Lessor</th>
+            <th>Address of Lessor</th>
+            <th>Assessor's Use Only</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan='4'>
+              <span class='helper'>* Report year of aquisition if lessor purchased the property being used.</span>
+              <span class='helper'>** Report Advertised retail price if cost is unknown.</span>
+            </td>
+            <td>Total</td>
+            <td></td>
+            <td colspan='4'>If additional space is needed, attach a separate sheet using the same format</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Part 4. Nonstandard Property -->
+    <div class='section'>
+      <div id='nonstandard-property'>
+        <table id='business-nonstandard-property'>
+          <thead>
+            <tr>
+              <th colspan='2'>
+                <h3>
+                  Part IV. Owned items with nonstandard value
+                  <span class='helper'>Report property on which you wish to report a value different from standard depreciated cost where such value more closely approximates fair market value. The assessor may request supportive information before accepting such value.</span>
+                </h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <table id='business-nsp-data'>
+                  <tr>
+                    <th>GRP</th>
+                    <th>Item Description</th>
+                    <th>Year Made</th>
+                    <th>Original Cost</th>
+                    <th>DEPR Factor</th>
+                    <th>Value as of January 1<sup>st</sup></th>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                    <td class='disabled'></td>
+                  </tr>
+                  <tr>
+                    <td colspan='6'>If additional space is needed, attach a separate sheet using the same format</td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <table id='business-nsp-office-use'>
+                  <thead>
+                    <tr>
+                      <th colspan='2'>Assessor's Use Only</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>DEPR</th>
+                      <th>Value</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td class='disabled'></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Agreements and Signature -->
+    <div class='section'>
+      <div id='agree-signature'>
+        <ul id='business-agreement'>
+          <li>
+            <span class='input'>
+              <span class='checkbox'></span>
+            </span>
+            <span class='label'>
+              Small accounts certification (Optional)
+              <span class='helper'>
+                By checking the box above, I certify that the total depreciated value of my property (all groups), based on Assessor’s Depreciation Schedule is $1,000 or less. I understand this certification is subject to penalties for perjury and I may be subject to statutory penalty and cost if this certification is proven false.
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class='input'>
+              <span class='checkbox'></span>
+            </span>
+            <span class='label'>I certify that the information contained herein, including any accompanying schedules or data, is true, correct, and complete, to the best of my knowledge and belief.</span>
+          </li>
+        </ul>
+        <ul id='business-signature'>
+          <li>
+            <span class='label'>Print Name</span>
+            <span class='input'>
+              &nbsp;#[bpp_business_owner]
+              <span class='helper'>
+                Please print name above and sign below
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class='label'>Title</span>
+            <span class='input'>
+              &nbsp;#[bpp_business_owner_title]
+              <span class='helper'>
+                Please print
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class='label'>Signed</span>
+            <span class='input'>#[bpp_business_owner_signature]</span>
+          </li>
+          <li>
+            <span class='label'>Date</span>
+            <span class='input'>#[bpp_business_owner_signature_date]</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

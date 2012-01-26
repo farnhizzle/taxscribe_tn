@@ -1,0 +1,68 @@
+.page-break {
+  page-break-after: always;
+}
+
+// defining a page
+.page {
+  @extend .page-break;
+  // height:98%;
+  min-height:792px;
+  overflow:hidden;
+  // margin:1%;
+  // width:98%;
+  // min-width:612px;
+}
+
+// section styles
+.section {
+  @include float(left);
+  margin-bottom:1em;
+  width:100%;
+}
+
+// major layout elements
+div, table {
+  width:100%;
+}
+
+// table base styles
+table {
+  border-collapse:collapse;
+  border-spacing:0 0;
+
+  th, td {
+    padding:.2em;
+    text-align:top;
+    vertical-align:top;
+  }
+
+  th {
+    font-weight:900;
+    text-align:center;
+    text-transform:uppercase;
+  }
+}
+
+// floating sections
+#juris-info, #taxyear-info, .doc-description, #assesors-use-only {
+  @include float(left);
+}
+
+#juris-info {
+  margin-right:5%;
+  width:65%;
+}
+
+#taxyear-info {
+  width:30%;
+}
+
+// doc description
+.doc-description {
+  margin-right:5%;
+  width:55%;
+}
+
+#assessors-use-only {
+  width:40%;
+}

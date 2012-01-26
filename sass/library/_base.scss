@@ -1,0 +1,15 @@
+
+html, body {
+  height:100%;
+  // overflow:hidden;
+  width:100%;
+}
+
+body {
+  color: $font-color;
+  font: {
+    family:$sans;
+    size:.625em;
+  }
+  line-height:1.25;
+}
