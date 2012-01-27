@@ -2,13 +2,40 @@
 $sans: "Helvetica Nueu", Helvetica, Arial, sans-serif;
 $font-color:#000;
 
+// Extended classes
+// bordered box
+.border { border:1px solid $font-color; }
+
+// lined tables
+.lined {
+  border-right:1px solid $font-color;
+  border-bottom:1px solid $font-color;
+}
+
+// lined bottom
+.lined-bottom { border-bottom:1px solid $font-color; }
+
+// disable
+.disabled { background-color:lighten($font-color, 70%); }
+
+// page break
+.page-break { page-break-after:always; }
+
+// checkbox style
+.checkbox {
+  @extend .border;
+  background-color:lighten($font-color, 70%);
+  margin-right:.5em;
+  width:20px !important;
+}
+
 // --------------------------------------------------- //
 
 // html & body
 html, body {
-  height:100%;
+  // height:792px;
   // overflow:hidden;
-  width:100%;
+  // width:612px;
 }
 
 body {
@@ -18,6 +45,7 @@ body {
     size:6pt;
   }
   line-height:1.15;
+  margin:0 auto;
 }
 // --------------------------------------------------- //
 
@@ -40,32 +68,21 @@ u { text-decoration:underline; }
 // --------------------------------------------------- //
 
 // layout
-// page break
-.page-break {
-  page-break-after: always;
-}
-
 // floating sections
-.page, #juris-info, #taxyear-info, .doc-description, #assesors-use-only, #business-info, #business-property-info {
+.page, .section, .alert, #juris-info, #taxyear-info, .doc-description, #assesors-use-only, #business-info, #business-property-info {
   @include float(left);
+  @include clearfix();
 }
 
 // defining a page
 .page {
   @extend .page-break;
-  // height:98%;
-  min-height:792px;
-  overflow:hidden;
   width:100%;
-  // margin:0 auto 1em;
-  // width:98%;
-  // width:612px;
 }
 
 // section styles
 .section, .alert {
-  @include float(left);
-  margin-bottom:1em;
+  margin-bottom:1em !important;
   width:100%;
 }
 
@@ -81,7 +98,7 @@ table {
   @extend .border;
 
   tr {
-    &:last-child, &.last {
+    &.last {
 
       th, td {
         border-bottom:none;
@@ -89,14 +106,13 @@ table {
     }
 
     th, td {
-      &:last-child, &.last {
+      &.last {
         border-right:none;
       }
     }
   }
 
   th, td {
-    // padding:.2em;
     @extend .lined;
     text-align:left;
     vertical-align:top;
@@ -113,9 +129,10 @@ table {
     }
   }
 
-  table > table, td table {
-
-    border:none; }
+  td table {
+    border:none;
+    border-bottom:1px solid $font-color;
+  }
 
   tbody {
     th, td {
@@ -133,7 +150,8 @@ table {
 }
 
 #taxyear-info {
-  width:29%;
+  float:right;
+  width:204px;
 }
 
 // doc description
@@ -154,6 +172,7 @@ table {
 
   li {
     @include float(left);
+    margin-bottom:.25em;
     width:100%;
 
     span {
@@ -175,22 +194,6 @@ table {
   }
 }
 
-// bordered box
-.border { border:1px solid $font-color; }
-
-// lined tables
-.lined {
-  border-right:1px solid $font-color;
-  border-bottom:1px solid $font-color;
-}
-
-// lined bottom
-.lined-bottom { border-bottom:1px solid $font-color; }
-
-// disable
-.disabled { background-color:lighten($font-color, 70%); }
-
-
 // helper text
 .helper {
   display:block;
@@ -209,12 +212,18 @@ table {
   width:86%;
 }
 
-.section-title {
+.section-title, thead {
 
   .helper {
     display:inline;
     font-weight:400;
   }
+}
+
+// juris specific info
+#taxyear-info {
+  th { width:25%; }
+  td { width:75%; }
 }
 
 // doc/form title
@@ -250,4 +259,37 @@ table {
 // Part 1
 #business-info, #business-property-info {
 
+}
+
+// Part 2
+
+// Part 3
+
+// Part 4
+
+// agreement and signature
+#business-signature {
+  margin-top:1em;
+
+  li {
+    @include float(left);
+    margin: 0 1% 1.5em 0;
+    position:relative;
+    width:49%;
+
+    span {
+      @include float(left);
+      width:50%;
+
+      &.input { @extend .lined-bottom; }
+
+      &.helper {
+        position:absolute;
+        top:1.5em;
+        left:50%;
+        // margin-right:-25%;
+        width:100%;
+      }
+    }
+  }
 }

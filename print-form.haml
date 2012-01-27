@@ -6,7 +6,9 @@
   /[if IE]
     <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 %body
+  / page 1
   .page
+
     / jurisdiction info
     .section
       %ul#juris-info
@@ -26,6 +28,7 @@
           %td
             0100010001111
             / #[account_number]
+
     / document info
     .section
       %h1.doc-title
@@ -46,97 +49,124 @@
           %tr
             %th Total This Side
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_total_side1]
             %th APPR Year
             %td
+              &nbsp;
               / #[office_use_appr_year]
           %tr
             %th Total Reverse Side
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_total_side2]
             %th Card Num
             %td
+              &nbsp;
               / #[office_use_card_num]
           %tr
             %th Total Attachments
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_total_attachments]
             %th Num of Cards
             %td
+              &nbsp;
               / #[office_use_num_of_cards]
           %tr
             %th Total Appraised Value
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_total_appraised_value]
             %th Prop Type
             %td
+              &nbsp;
               / #[office_use_prop_type]
           %tr
             %th Assessment Ratio
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_assessment_ratio] x .30
             %th Ward
             %td
+              &nbsp;
               / #[office_use_ward]
           %tr
             %th Assessment
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_assessment]
             %th City
             %td
+              &nbsp;
               / #[office_use_city]
           %tr
             %th Asmnt Type:
             %td
+              &nbsp;
               / #[office_use_assessment_type]
             %th Parcel Status
             %td
+              &nbsp;
               / #[office_use_parcel_status]
             %th SSD1
             %td
+              &nbsp;
               / #[office_use_ssd1]
           %tr
             %th Schedule Furnished
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_schedule_furnish_date]
             %th SSD2
             %td
+              &nbsp;
               / #[office_use_ssd2]
           %tr
             %th Schedule Returned
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_schedule_returned_date]
             %th Area Code
             %td
+              &nbsp;
               / #[office_use_area_code]
           %tr
             %th Desk Audited By
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_desk_audit_name]
             %th Date
             %td
+              &nbsp;
               / #[office_use_desk_audit_name_date]
           %tr
             %th Field Audited By
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_field_audit_name]
             %th Date
             %td
+              &nbsp;
               / #[office_use_field_audit_name_date]
           %tr
             %th Business Code
             %td{:colspan => "5"}
+              &nbsp;
               / #[office_use_business_code]
           %tr
             %th Units Type
             %td{:colspan => "3"}
+              &nbsp;
               / #[office_use_units_type]
             %th Number
             %td
+              &nbsp;
               / #[office_use_number]
           %tr.last
             %th Appraised $ per Unit
             %td{:colspan => "5"}
+              &nbsp;
               / #[office_use_appraised_dollar_per_unit]
 
     / Part 1 General Data
@@ -148,78 +178,96 @@
         %li
           %span.label Business Owner
           %span.input
-            John Doe
+            &nbsp;
             / #[bpp_business_owner]
         %li
           %span.label Contact Person
           %span.input
+            &nbsp;
             / #[bpp_business_contact]
         %li
           %span.label State Sales Tax Number
           %span.input
+            &nbsp;
             / #[bpp_state_sales_tax]
         %li
           %span.label IRS Identification Number
           %span.input
+            &nbsp;
             / #[bpp_irs_number]
         %li
           %span.label Business License Number
           %span.input
+            &nbsp;
             / #[bpp_business_license]
         %li
           %span.label Business Phone
           %span.input
+            &nbsp;
             / #[bpp_business_phone]
         %li
           %span.label Email Address
           %span.input
+            &nbsp;
             / #[bpp_business_email]
         %li
           %span.label Type of Business
           %span.input
+            &nbsp;
             / #[bpp_business_type]
-        %li
-          %span.label How long has this business been in operation?
-          %span.input
-            / #[bpp_business_operation_time]
-        %li
-          %span.label How many vehicles are used in your business?
-          %span.input
-            / #[bpp_business_vehicle_total]
-        %li
-          %span.label How many employees do you employ?
-          %span.input
-            / #[bpp_business_employee_total]
+
       %ul#business-property-info
         %li
           %span.label Property Address
           %span.input
+            &nbsp;
             / #[bpp_business_property_address]
         %li
           %span.label Owner of Real Estate
           %span.input
+            &nbsp;
             / #[bpp_business_real_estate_owner]
         %li
           %span.label
-            Business Located
-            %span.helper
-              (please check one)
+            Business Located (please check one)
           %span.input
-            Outside city limits
-            %span.checkbox
-            Inside city limits
-            %span.checkbox
+            %span
+              %span.checkbox &nbsp;
+              Outside city limits
+            %span
+              %span.checkbox &nbsp;
+              Inside city limits
+
         %li
           %span.label City
           %span.input
+            &nbsp;
             / #[bpp_business_city]
         %li
           %span.label Approx sqft of building area used?
           %span.input
+            &nbsp;
             / #[bpp_business_sqft]
+        %li
+          %span.label How long has this business been in operation?
+          %span.input
+            &nbsp;
+            / #[bpp_business_operation_time]
+        %li
+          %span.label How many vehicles are used in your business?
+          %span.input
+            &nbsp;
+            / #[bpp_business_vehicle_total]
+        %li
+          %span.label How many employees do you employ?
+          %span.input
+            &nbsp;
+            / #[bpp_business_employee_total]
 
-    .alert.section
-      %p If you were out of business in this county on #[taxyear_end_date], please notify the assessor of property of the date out of business  in order to avoid a forced assessment.
+    / Out of business alert
+    .section
+      .alert
+        %p If you were out of business in this county on #[taxyear_end_date], please notify the assessor of property of the date out of business  in order to avoid a forced assessment.
 
     / Part 2. Owned Property
     #part-2.section
@@ -252,44 +300,44 @@
                         %th Depr
                       %tr
                         %td 2011
-                        %td.disabled
-                        %td
+                        %td.disabled &nbsp;
+                        %td &nbsp;
                         %td 0.88
                       %tr
                         %td 2010
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.75
                       %tr
                         %td 2009
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.63
                       %tr
                         %td 2008
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.50
                       %tr
                         %td 2007
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.38
                       %tr
                         %td 2006
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.25
                       %tr
                         %td Prior
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.20
                     %tfoot
                       %tr
                         %td Total
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
 
                   %table#group-2
                     %thead
@@ -303,24 +351,24 @@
                         %th Depr
                       %tr
                         %td 2011
-                        %td.disabled
-                        %td
+                        %td.disabled &nbsp;
+                        %td &nbsp;
                         %td 0.67
                       %tr
                         %td 2010
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.33
                       %tr
                         %td Prior
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.20
                     %tfoot
                       %tr
                         %td Total
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
 
                   %table#group-3
                     %thead
@@ -334,29 +382,29 @@
                         %th Depr
                       %tr
                         %td 2011
-                        %td.disabled
-                        %td
+                        %td.disabled &nbsp;
+                        %td &nbsp;
                         %td 0.75
                       %tr
                         %td 2010
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.50
                       %tr
                         %td 2009
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.25
                       %tr
                         %td Prior
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.20
                     %tfoot
                       %tr
                         %td Total
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
 
                 %td.column
                   %table#group-4
@@ -373,64 +421,64 @@
                         %th Depr
                       %tr
                         %td 2011
-                        %td.disabled
-                        %td
+                        %td.disabled &nbsp;
+                        %td &nbsp;
                         %td 0.92
                       %tr
                         %td 2010
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.85
                       %tr
                         %td 2009
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.77
                       %tr
                         %td 2008
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.69
                       %tr
                         %td 2007
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.62
                       %tr
                         %td 2006
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.54
                       %tr
                         %td 2005
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.46
                       %tr
                         %td 2004
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.38
                       %tr
                         %td 2003
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.31
                       %tr
                         %td 2002
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.23
                       %tr
                         %td Prior
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.20
                     %tfoot
                       %tr
                         %td Total
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
 
                   %table#group-5
                     %thead
@@ -444,45 +492,45 @@
                         %th Depr
                       %tr
                         %td 2011
-                        %td.disabled
-                        %td
+                        %td.disabled &nbsp;
+                        %td &nbsp;
                         %td 0.88
                       %tr
                         %td 2010
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.75
                       %tr
                         %td 2009
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.63
                       %tr
                         %td 2008
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.50
                       %tr
                         %td 2007
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.38
                       %tr
                         %td 2006
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.25
                       %tr
                         %td Prior
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
                         %td 0.20
                     %tfoot
-                      %tr
+                      %tr.last
                         %td Total
-                        %td
-                        %td
-                        %td
+                        %td &nbsp;
+                        %td &nbsp;
+                        %td &nbsp;
 
               %tr{:rowspan => "2"}
                 %td
@@ -508,74 +556,74 @@
                   %th Depr
                 %tr
                   %td 2011
-                  %td.disabled
-                  %td
+                  %td.disabled &nbsp;
+                  %td &nbsp;
                   %td 0.94
                 %tr
                   %td 2010
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.88
                 %tr
                   %td 2009
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.81
                 %tr
                   %td 2008
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.75
                 %tr
                   %td 2007
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.69
                 %tr
                   %td 2006
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.63
                 %tr
                   %td 2005
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.56
                 %tr
                   %td 2004
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.50
                 %tr
                   %td 2003
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.44
                 %tr
                   %td 2002
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.38
                 %tr
                   %td 2001
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.31
                 %tr
                   %td 2000
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.25
                 %tr
                   %td Prior
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.20
               %tfoot
                 %tr
                   %td Total
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
 
             %table#group-7
               %thead
@@ -589,8 +637,8 @@
                   %th Depr
                 %tr
                   %td All
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.02
 
             %table#group-8
@@ -605,8 +653,8 @@
                   %th Depr
                 %tr
                   %td Original Cost
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 1.00
 
             %table#group-9
@@ -621,29 +669,29 @@
                   %th Depr
                 %tr
                   %td 2011
-                  %td.disabled
-                  %td
+                  %td.disabled &nbsp;
+                  %td &nbsp;
                   %td 0.80
                 %tr
                   %td 2010
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.60
                 %tr
                   %td 2009
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.40
                 %tr
                   %td Prior
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.20
               %tfoot
                 %tr
                   %td Total
-                  %td
-                  %td
+                  %td &nbsp;
+                  %td &nbsp;
 
             %table#group-10
               %thead
@@ -656,15 +704,16 @@
                   %th Revised Cost
                   %th Depr
                 %tr
-                  %td All
-                  %td
-                  %td
+                  %td  All
+                  %td &nbsp;
+                  %td &nbsp;
                   %td 0.15
 
-    .alert
-      %p Print your Name &amp; Title and Sign the Schedule on the Reverse Side
+    .section
+      .alert
+        %p Print your Name &amp; Title and Sign the Schedule on the Reverse Side
 
-  .page-break
+    .section
 
   .page
     / Part 3. Leased Property
@@ -689,214 +738,216 @@
             %th Address of Lessor
             %th Assessor's Use Only
           %tr
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
           %tr
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
           %tr
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
-            %td
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
+            %td &nbsp;
           %tr
             %td{:colspan => "4"}
               %span.helper * Report year of aquisition if lessor purchased the property being used.
               %span.helper ** Report Advertised retail price if cost is unknown.
             %td Total
-            %td
-            %td{:colspan => "4"} If additional space is needed, attach a separate sheet using the same format
+            %td &nbsp;
+            %td{:colspan => "4", :class => "disabled"} If additional space is needed, attach a separate sheet using the same format
 
     / Part 4. Nonstandard Property
     #part-4.section
-      #nonstandard-property
-        %table#business-nonstandard-property
-          %thead
-            %tr
-              %th{:colspan => "2"}
-                %h3
-                  Part IV. Owned items with nonstandard value
-                  %span.helper Report property on which you wish to report a value different from standard depreciated cost where such value more closely approximates fair market value. The assessor may request supportive information before accepting such value.
-          %tbody
-            %tr
-              %td
-                %table#business-nsp-data
+      %table#business-nonstandard-property
+        %thead
+          %tr
+            %th{:colspan => "2"}
+              %h3
+                Part IV. Owned items with nonstandard value
+                %span.helper Report property on which you wish to report a value different from standard depreciated cost where such value more closely approximates fair market value. The assessor may request supportive information before accepting such value.
+        %tbody
+          %tr
+            %td.column
+              %table#business-nsp-data
+                %tr
+                  %th GRP
+                  %th Item Description
+                  %th Year Made
+                  %th Original Cost
+                  %th DEPR Factor
+                  %th Value as of January 1<sup>st</sup>
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                %tr
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td &nbsp;
+                  %td Total
+                  %td.disabled
+                %tr
+                  %td{:colspan => "6"} If additional space is needed, attach a separate sheet using the same format
+            %td.column
+              %table#business-nsp-office-use
+                %thead
                   %tr
-                    %th GRP
-                    %th Item Description
-                    %th Year Made
-                    %th Original Cost
-                    %th DEPR Factor
-                    %th Value as of January 1<sup>st</sup>
+                    %th{:colspan => "2"} Assessor's Use Only
+                %tbody
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %th DEPR
+                    %th Value
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td
+                    %td &nbsp;
+                    %td &nbsp;
                   %tr
-                    %td
-                    %td
-                    %td
-                    %td
-                    %td Total
+                    %td &nbsp;
+                    %td &nbsp;
+                  %tr
+                    %td &nbsp;
+                    %td &nbsp;
+                  %tr
                     %td.disabled
-                  %tr
-                    %td{:colspan => "6"} If additional space is needed, attach a separate sheet using the same format
-              %td
-                %table#business-nsp-office-use
-                  %thead
-                    %tr
-                      %th{:colspan => "2"} Assessor's Use Only
-                  %tbody
-                    %tr
-                      %th DEPR
-                      %th Value
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td
-                      %td
-                    %tr
-                      %td.disabled
-                      %td
+                    %td &nbsp;
 
     / Agreements and Signature
-    .section
-      #agree-signature
-        %ul#business-agreement
-          %li
-            %span.input
-              %span.checkbox
-            %span.label
-              Small accounts certification (Optional)
-              %span.helper
-                By checking the box above, I certify that the total depreciated value of my property (all groups), based on Assessor’s Depreciation Schedule is $1,000 or less. I understand this certification is subject to penalties for perjury and I may be subject to statutory penalty and cost if this certification is proven false.
+    #agree-signature.section
+      %ul#business-agreement
+        %li
+          %span.input
+            %span.checkbox &nbsp;&nbsp;&nbsp;&nbsp;
+          %span.label
+            Small accounts certification (Optional) - By checking the box above, I certify that the total depreciated value of my property (all groups), based on Assessor’s Depreciation Schedule is $1,000 or less. I understand this certification is subject to penalties for perjury and I may be subject to statutory penalty and cost if this certification is proven false.
 
-          %li
-            %span.input
-              %span.checkbox
-            %span.label I certify that the information contained herein, including any accompanying schedules or data, is true, correct, and complete, to the best of my knowledge and belief.
-        %ul#business-signature
-          %li
-            %span.label Print Name
-            %span.input
-              &nbsp;#[bpp_business_owner]
-              %span.helper
-                Please print name above and sign below
-          %li
-            %span.label Title
-            %span.input
-              &nbsp;#[bpp_business_owner_title]
-              %span.helper
-                Please print
-          %li
-            %span.label Signed
-            %span.input #[bpp_business_owner_signature]
-          %li
-            %span.label Date
-            %span.input #[bpp_business_owner_signature_date]
+        %li
+          %span.input
+            %span.checkbox &nbsp;&nbsp;&nbsp;&nbsp;
+          %span.label I certify that the information contained herein, including any accompanying schedules or data, is true, correct, and complete, to the best of my knowledge and belief.
+      %ul#business-signature
+        %li
+          %span.label Print Name
+          %span.input
+            &nbsp;
+            - #[bpp_business_owner]
+            %span.helper
+              Please print name above and sign below
+        %li
+          %span.label Title
+          %span.input
+            &nbsp;
+            - #[bpp_business_owner_title]
+            %span.helper
+              Please print
+        %li
+          %span.label Signed
+          %span.input
+            &nbsp;
+            - #[bpp_business_owner_signature]
+        %li
+          %span.label Date
+          %span.input
+            &nbsp;
+            - #[bpp_business_owner_signature_date]
