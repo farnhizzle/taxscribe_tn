@@ -1,5 +1,11 @@
+// page break
 .page-break {
   page-break-after: always;
+}
+
+// floating sections
+.page, #juris-info, #taxyear-info, .doc-description, #assesors-use-only, #business-info, #business-property-info {
+  @include float(left);
 }
 
 // defining a page
@@ -8,13 +14,14 @@
   // height:98%;
   min-height:792px;
   overflow:hidden;
-  // margin:1%;
+  width:100%;
+  // margin:0 auto 1em;
   // width:98%;
-  // min-width:612px;
+  // width:612px;
 }
 
 // section styles
-.section {
+.section, .alert {
   @include float(left);
   margin-bottom:1em;
   width:100%;
@@ -29,32 +36,62 @@ div, table {
 table {
   border-collapse:collapse;
   border-spacing:0 0;
+  @extend .border;
+
+  tr {
+    &:last-child, &.last {
+
+      th, td {
+        border-bottom:none;
+      }
+    }
+
+    th, td {
+      &:last-child, &.last {
+        border-right:none;
+      }
+    }
+  }
 
   th, td {
-    padding:.2em;
-    text-align:top;
+    // padding:.2em;
+    @extend .lined;
+    text-align:left;
     vertical-align:top;
   }
 
   th {
     font-weight:900;
-    text-align:center;
     text-transform:uppercase;
+  }
+
+  thead {
+    th, td {
+      border-bottom:1px solid $font-color !important;
+    }
+  }
+
+  table > table, td table {
+
+    border:none; }
+
+  tbody {
+    th, td {
+      padding-left:.5em;
+
+      &.column { padding:0; }
+    }
   }
 }
 
-// floating sections
-#juris-info, #taxyear-info, .doc-description, #assesors-use-only {
-  @include float(left);
-}
-
+// juris specific info
 #juris-info {
   margin-right:5%;
   width:65%;
 }
 
 #taxyear-info {
-  width:30%;
+  width:29%;
 }
 
 // doc description
@@ -63,6 +100,25 @@ table {
   width:55%;
 }
 
+// assessors use box
 #assessors-use-only {
   width:40%;
+}
+
+// part 1
+#business-info, #business-property-info {
+  margin-right:1%;
+  width:49%;
+
+  li {
+    @include float(left);
+    width:100%;
+
+    span {
+      @include float(left);
+      width:50%;
+
+      &.input { @extend .lined-bottom; }
+    }
+  }
 }

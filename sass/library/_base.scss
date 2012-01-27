@@ -1,4 +1,10 @@
+// Variables
+$sans: "Helvetica Nueu", Helvetica, Arial, sans-serif;
+$font-color:#000;
 
+// --------------------------------------------------- //
+
+// html & body
 html, body {
   height:100%;
   // overflow:hidden;
@@ -9,7 +15,239 @@ body {
   color: $font-color;
   font: {
     family:$sans;
-    size:.625em;
+    size:6pt;
   }
-  line-height:1.25;
+  line-height:1.15;
+}
+// --------------------------------------------------- //
+
+// typography
+h1 { font-size:2em; }
+h2 { font-size:1.5em; }
+h3 { font-size:1.2em; }
+h4 { font-size:1.05em; }
+h5 { font-size:1em; }
+h6 { font-size:.95em; }
+
+h1, h2, h3, h4, h5, h6 { font-weight:900; }
+
+strong, b { font-weight:900; }
+
+em, i { font-style:italic; }
+
+u { text-decoration:underline; }
+
+// --------------------------------------------------- //
+
+// layout
+// page break
+.page-break {
+  page-break-after: always;
+}
+
+// floating sections
+.page, #juris-info, #taxyear-info, .doc-description, #assesors-use-only, #business-info, #business-property-info {
+  @include float(left);
+}
+
+// defining a page
+.page {
+  @extend .page-break;
+  // height:98%;
+  min-height:792px;
+  overflow:hidden;
+  width:100%;
+  // margin:0 auto 1em;
+  // width:98%;
+  // width:612px;
+}
+
+// section styles
+.section, .alert {
+  @include float(left);
+  margin-bottom:1em;
+  width:100%;
+}
+
+// major layout elements
+div, table {
+  width:100%;
+}
+
+// table base styles
+table {
+  border-collapse:collapse;
+  border-spacing:0 0;
+  @extend .border;
+
+  tr {
+    &:last-child, &.last {
+
+      th, td {
+        border-bottom:none;
+      }
+    }
+
+    th, td {
+      &:last-child, &.last {
+        border-right:none;
+      }
+    }
+  }
+
+  th, td {
+    // padding:.2em;
+    @extend .lined;
+    text-align:left;
+    vertical-align:top;
+  }
+
+  th {
+    font-weight:900;
+    text-transform:uppercase;
+  }
+
+  thead {
+    th, td {
+      border-bottom:1px solid $font-color !important;
+    }
+  }
+
+  table > table, td table {
+
+    border:none; }
+
+  tbody {
+    th, td {
+      padding-left:.5em;
+
+      &.column { padding:0; }
+    }
+  }
+}
+
+// juris specific info
+#juris-info {
+  margin-right:5%;
+  width:65%;
+}
+
+#taxyear-info {
+  width:29%;
+}
+
+// doc description
+.doc-description {
+  margin-right:5%;
+  width:55%;
+}
+
+// assessors use box
+#assessors-use-only {
+  width:40%;
+}
+
+// part 1
+#business-info, #business-property-info {
+  margin-right:1%;
+  width:49%;
+
+  li {
+    @include float(left);
+    width:100%;
+
+    span {
+      @include float(left);
+      width:50%;
+
+      &.input { @extend .lined-bottom; }
+    }
+  }
+}
+// --------------------------------------------------- //
+
+// Display and design
+// table displays
+table {
+
+  thead {
+    th, td { background-color:lighten($font-color, 70%); }
+  }
+}
+
+// bordered box
+.border { border:1px solid $font-color; }
+
+// lined tables
+.lined {
+  border-right:1px solid $font-color;
+  border-bottom:1px solid $font-color;
+}
+
+// lined bottom
+.lined-bottom { border-bottom:1px solid $font-color; }
+
+// disable
+.disabled { background-color:lighten($font-color, 70%); }
+
+
+// helper text
+.helper {
+  display:block;
+  font-size:0.75em;
+  text-transform:normal;
+}
+
+// alert
+.alert {
+  background-color:lighten($font-color, 70%);
+  @extend .border;
+  font-weight:900;
+  margin:0 4.5%;
+  padding: 1% 2%;
+  text-align:center;
+  width:86%;
+}
+
+.section-title {
+
+  .helper {
+    display:inline;
+    font-weight:400;
+  }
+}
+
+// doc/form title
+.doc-title, .doc-sub-title {
+  text-align:center;
+  text-transform:uppercase;
+
+  .due-by-date {
+    @extend .alert;
+    @include float(none);
+    font-size:.8em;
+    font-weight:400;
+    margin:0;
+    padding:.25em .5em;
+  }
+}
+
+.doc-title { margin-bottom:.25em; }
+
+// assessors use only
+#assessors-use-only {
+
+  th, td{ border-right:none; }
+
+  th { border:none; }
+
+  thead {
+    th, td { text-align:center; }
+  }
+
+}
+
+// Part 1
+#business-info, #business-property-info {
+
 }

@@ -63,166 +63,259 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 3, ../sass/library/_type.scss */
+/* line 8, ../sass/library/_base.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 14, ../sass/library/_base.scss */
+body {
+  color: black;
+  font-family: "Helvetica Nueu", Helvetica, Arial, sans-serif;
+  font-size: 6pt;
+  line-height: 1.15;
+}
+
+/* line 25, ../sass/library/_base.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 4, ../sass/library/_type.scss */
+/* line 26, ../sass/library/_base.scss */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 5, ../sass/library/_type.scss */
+/* line 27, ../sass/library/_base.scss */
 h3 {
   font-size: 1.2em;
 }
 
-/* line 6, ../sass/library/_type.scss */
+/* line 28, ../sass/library/_base.scss */
 h4 {
   font-size: 1.05em;
 }
 
-/* line 7, ../sass/library/_type.scss */
+/* line 29, ../sass/library/_base.scss */
 h5 {
   font-size: 1em;
 }
 
-/* line 8, ../sass/library/_type.scss */
+/* line 30, ../sass/library/_base.scss */
 h6 {
   font-size: .95em;
 }
 
-/* line 10, ../sass/library/_type.scss */
+/* line 32, ../sass/library/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
-/* line 12, ../sass/library/_type.scss */
+/* line 34, ../sass/library/_base.scss */
 strong, b {
   font-weight: 900;
 }
 
-/* line 14, ../sass/library/_type.scss */
+/* line 36, ../sass/library/_base.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 16, ../sass/library/_type.scss */
+/* line 38, ../sass/library/_base.scss */
 u {
   text-decoration: underline;
 }
 
-/* line 1, ../sass/library/_layout.scss */
+/* line 44, ../sass/library/_base.scss */
 .page-break, .page {
   page-break-after: always;
 }
 
-/* line 6, ../sass/library/_layout.scss */
+/* line 49, ../sass/library/_base.scss */
+.page, #juris-info, #taxyear-info, .doc-description, #assesors-use-only, #business-info, #business-property-info {
+  display: inline;
+  float: left;
+}
+
+/* line 54, ../sass/library/_base.scss */
 .page {
   min-height: 792px;
   overflow: hidden;
+  width: 100%;
 }
 
-/* line 17, ../sass/library/_layout.scss */
-.section {
+/* line 66, ../sass/library/_base.scss */
+.section, .alert, .doc-title .due-by-date, .doc-sub-title .due-by-date {
   display: inline;
   float: left;
   margin-bottom: 1em;
   width: 100%;
 }
 
-/* line 24, ../sass/library/_layout.scss */
+/* line 73, ../sass/library/_base.scss */
 div, table {
   width: 100%;
 }
 
-/* line 29, ../sass/library/_layout.scss */
+/* line 78, ../sass/library/_base.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0 0;
 }
-/* line 33, ../sass/library/_layout.scss */
+/* line 86, ../sass/library/_base.scss */
+table tr:last-child th, table tr:last-child td, table tr.last th, table tr.last td {
+  border-bottom: none;
+}
+/* line 92, ../sass/library/_base.scss */
+table tr th:last-child, table tr th.last, table tr td:last-child, table tr td.last {
+  border-right: none;
+}
+/* line 98, ../sass/library/_base.scss */
 table th, table td {
-  padding: .2em;
-  text-align: top;
+  text-align: left;
   vertical-align: top;
 }
-/* line 39, ../sass/library/_layout.scss */
+/* line 105, ../sass/library/_base.scss */
 table th {
   font-weight: 900;
-  text-align: center;
   text-transform: uppercase;
 }
-
-/* line 47, ../sass/library/_layout.scss */
-#juris-info, #taxyear-info, .doc-description, #assesors-use-only {
-  display: inline;
-  float: left;
+/* line 111, ../sass/library/_base.scss */
+table thead th, table thead td {
+  border-bottom: 1px solid black !important;
+}
+/* line 116, ../sass/library/_base.scss */
+table table > table, table td table {
+  border: none;
+}
+/* line 121, ../sass/library/_base.scss */
+table tbody th, table tbody td {
+  padding-left: .5em;
+}
+/* line 124, ../sass/library/_base.scss */
+table tbody th.column, table tbody td.column {
+  padding: 0;
 }
 
-/* line 51, ../sass/library/_layout.scss */
+/* line 130, ../sass/library/_base.scss */
 #juris-info {
   margin-right: 5%;
   width: 65%;
 }
 
-/* line 56, ../sass/library/_layout.scss */
+/* line 135, ../sass/library/_base.scss */
 #taxyear-info {
-  width: 30%;
+  width: 29%;
 }
 
-/* line 61, ../sass/library/_layout.scss */
+/* line 140, ../sass/library/_base.scss */
 .doc-description {
   margin-right: 5%;
   width: 55%;
 }
 
-/* line 66, ../sass/library/_layout.scss */
+/* line 146, ../sass/library/_base.scss */
 #assessors-use-only {
   width: 40%;
 }
 
-/* line 7, ../sass/library/_display.scss */
+/* line 151, ../sass/library/_base.scss */
+#business-info, #business-property-info {
+  margin-right: 1%;
+  width: 49%;
+}
+/* line 155, ../sass/library/_base.scss */
+#business-info li, #business-property-info li {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+/* line 159, ../sass/library/_base.scss */
+#business-info li span, #business-property-info li span {
+  display: inline;
+  float: left;
+  width: 50%;
+}
+
+/* line 174, ../sass/library/_base.scss */
 table thead th, table thead td {
   background-color: #b3b3b3;
 }
 
-/* line 12, ../sass/library/_display.scss */
+/* line 179, ../sass/library/_base.scss */
+.border, table, .alert, .doc-title .due-by-date, .doc-sub-title .due-by-date {
+  border: 1px solid black;
+}
+
+/* line 182, ../sass/library/_base.scss */
+.lined, table th, table td {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* line 188, ../sass/library/_base.scss */
+.lined-bottom, #business-info li span.input, #business-property-info li span.input {
+  border-bottom: 1px solid black;
+}
+
+/* line 191, ../sass/library/_base.scss */
+.disabled {
+  background-color: #b3b3b3;
+}
+
+/* line 195, ../sass/library/_base.scss */
 .helper {
   display: block;
   font-size: 0.75em;
   text-transform: normal;
 }
 
-/* line 19, ../sass/library/_display.scss */
+/* line 202, ../sass/library/_base.scss */
+.alert, .doc-title .due-by-date, .doc-sub-title .due-by-date {
+  background-color: #b3b3b3;
+  font-weight: 900;
+  margin: 0 4.5%;
+  padding: 1% 2%;
+  text-align: center;
+  width: 86%;
+}
+
+/* line 214, ../sass/library/_base.scss */
+.section-title .helper {
+  display: inline;
+  font-weight: 400;
+}
+
+/* line 221, ../sass/library/_base.scss */
 .doc-title, .doc-sub-title {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 23, ../sass/library/_display.scss */
+/* line 225, ../sass/library/_base.scss */
 .doc-title .due-by-date, .doc-sub-title .due-by-date {
-  border: 2px solid black;
+  display: inline;
+  float: none;
   font-size: .8em;
   font-weight: 400;
-  padding: .2em .4em;
+  margin: 0;
+  padding: .25em .5em;
 }
 
-/* line 31, ../sass/library/_display.scss */
+/* line 235, ../sass/library/_base.scss */
 .doc-title {
   margin-bottom: .25em;
 }
 
-/* line 2, ../sass/library/_base.scss */
-html, body {
-  height: 100%;
-  width: 100%;
+/* line 240, ../sass/library/_base.scss */
+#assessors-use-only th, #assessors-use-only td {
+  border-right: none;
 }
-
-/* line 8, ../sass/library/_base.scss */
-body {
-  color: black;
-  font-family: "Helvetica Nueu", Helvetica, Arial, sans-serif;
-  font-size: .625em;
-  line-height: 1.25;
+/* line 242, ../sass/library/_base.scss */
+#assessors-use-only th {
+  border: none;
+}
+/* line 245, ../sass/library/_base.scss */
+#assessors-use-only thead th, #assessors-use-only thead td {
+  text-align: center;
 }

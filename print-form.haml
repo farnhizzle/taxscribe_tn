@@ -18,16 +18,21 @@
       %table#taxyear-info
         %tr
           %th Tax Year
-          %td #[current_tax_year]
-        %tr
+          %td
+            2012
+            / #[current_tax_year]
+        %tr.last
           %th Account #
-          %td #[account_number]
+          %td
+            0100010001111
+            / #[account_number]
     / document info
     .section
       %h1.doc-title
         Tangible Personal Property Schedule
         %span.due-by-date
-          Due: #[bpp_due_date]
+          Due: March 1st
+          / #[bpp_due_date]
       %h2.doc-sub-title For Reporting Commercial and Industrial Personal Property
 
     / assessor use only
@@ -40,119 +45,160 @@
         %tbody
           %tr
             %th Total This Side
-            %td{:colspan => "3"} #[office_use_total_side1]
+            %td{:colspan => "3"}
+              / #[office_use_total_side1]
             %th APPR Year
-            %td #[office_use_appr_year]
+            %td
+              / #[office_use_appr_year]
           %tr
             %th Total Reverse Side
-            %td{:colspan => "3"} #[office_use_total_side2]
+            %td{:colspan => "3"}
+              / #[office_use_total_side2]
             %th Card Num
-            %td #[office_use_card_num]
+            %td
+              / #[office_use_card_num]
           %tr
             %th Total Attachments
-            %td{:colspan => "3"} #[office_use_total_attachments]
+            %td{:colspan => "3"}
+              / #[office_use_total_attachments]
             %th Num of Cards
-            %td #[office_use_num_of_cards]
+            %td
+              / #[office_use_num_of_cards]
           %tr
             %th Total Appraised Value
-            %td{:colspan => "3"} #[office_use_total_appraised_value]
+            %td{:colspan => "3"}
+              / #[office_use_total_appraised_value]
             %th Prop Type
-            %td #[office_use_prop_type]
+            %td
+              / #[office_use_prop_type]
           %tr
             %th Assessment Ratio
-            %td{:colspan => "3"} #[office_use_assessment_ratio] x .30
+            %td{:colspan => "3"}
+              / #[office_use_assessment_ratio] x .30
             %th Ward
-            %td #[office_use_ward]
+            %td
+              / #[office_use_ward]
           %tr
             %th Assessment
-            %td{:colspan => "3"} #[office_use_assessment]
+            %td{:colspan => "3"}
+              / #[office_use_assessment]
             %th City
-            %td #[office_use_city]
+            %td
+              / #[office_use_city]
           %tr
             %th Asmnt Type:
-            %td #[office_use_assessment_type]
+            %td
+              / #[office_use_assessment_type]
             %th Parcel Status
-            %td #[office_use_parcel_status]
+            %td
+              / #[office_use_parcel_status]
             %th SSD1
-            %td #[office_use_ssd1]
+            %td
+              / #[office_use_ssd1]
           %tr
             %th Schedule Furnished
-            %td{:colspan => "3"} #[office_use_schedule_furnish_date]
+            %td{:colspan => "3"}
+              / #[office_use_schedule_furnish_date]
             %th SSD2
-            %td #[office_use_ssd2]
+            %td
+              / #[office_use_ssd2]
           %tr
             %th Schedule Returned
-            %td{:colspan => "3"} #[office_use_schedule_returned_date]
+            %td{:colspan => "3"}
+              / #[office_use_schedule_returned_date]
             %th Area Code
-            %td #[office_use_area_code]
+            %td
+              / #[office_use_area_code]
           %tr
             %th Desk Audited By
-            %td{:colspan => "3"} #[office_use_desk_audit_name]
+            %td{:colspan => "3"}
+              / #[office_use_desk_audit_name]
             %th Date
-            %td #[office_use_desk_audit_name_date]
+            %td
+              / #[office_use_desk_audit_name_date]
           %tr
             %th Field Audited By
-            %td{:colspan => "3"} #[office_use_field_audit_name]
+            %td{:colspan => "3"}
+              / #[office_use_field_audit_name]
             %th Date
-            %td #[office_use_field_audit_name_date]
+            %td
+              / #[office_use_field_audit_name_date]
           %tr
             %th Business Code
-            %td{:colspan => "5"} #[office_use_business_code]
+            %td{:colspan => "5"}
+              / #[office_use_business_code]
           %tr
             %th Units Type
-            %td{:colspan => "3"} #[office_use_units_type]
+            %td{:colspan => "3"}
+              / #[office_use_units_type]
             %th Number
-            %td #[office_use_number]
-          %tr
+            %td
+              / #[office_use_number]
+          %tr.last
             %th Appraised $ per Unit
-            %td{:colspan => "5"} #[office_use_appraised_dollar_per_unit]
+            %td{:colspan => "5"}
+              / #[office_use_appraised_dollar_per_unit]
 
     / Part 1 General Data
-    .section
+    #part-1.section
       %h3.section-title
         Part I. General Data
         %span.helper (Make changes as needed)
       %ul#business-info
         %li
           %span.label Business Owner
-          %span.input #[bpp_business_owner]
+          %span.input
+            John Doe
+            / #[bpp_business_owner]
         %li
           %span.label Contact Person
-          %span.input #[bpp_business_contact]
+          %span.input
+            / #[bpp_business_contact]
         %li
           %span.label State Sales Tax Number
-          %span.input #[bpp_state_sales_tax]
+          %span.input
+            / #[bpp_state_sales_tax]
         %li
           %span.label IRS Identification Number
-          %span.input #[bpp_irs_number]
+          %span.input
+            / #[bpp_irs_number]
         %li
           %span.label Business License Number
-          %span.input #[bpp_business_license]
+          %span.input
+            / #[bpp_business_license]
         %li
           %span.label Business Phone
-          %span.input #[bpp_business_phone]
+          %span.input
+            / #[bpp_business_phone]
         %li
           %span.label Email Address
-          %span.input #[bpp_business_email]
+          %span.input
+            / #[bpp_business_email]
         %li
           %span.label Type of Business
-          %span.input #[bpp_business_type]
+          %span.input
+            / #[bpp_business_type]
         %li
           %span.label How long has this business been in operation?
-          %span.input #[bpp_business_operation_time]
+          %span.input
+            / #[bpp_business_operation_time]
         %li
           %span.label How many vehicles are used in your business?
-          %span.input #[bpp_business_vehicle_total]
+          %span.input
+            / #[bpp_business_vehicle_total]
         %li
           %span.label How many employees do you employ?
-          %span.input #[bpp_business_employee_total]
+          %span.input
+            / #[bpp_business_employee_total]
       %ul#business-property-info
         %li
           %span.label Property Address
-          %span.input #[bpp_business_property_address]
+          %span.input
+            / #[bpp_business_property_address]
         %li
           %span.label Owner of Real Estate
-          %span.input #[bpp_business_real_estate_owner]
+          %span.input
+            / #[bpp_business_real_estate_owner]
         %li
           %span.label
             Business Located
@@ -165,16 +211,18 @@
             %span.checkbox
         %li
           %span.label City
-          %span.input #[bpp_business_city]
+          %span.input
+            / #[bpp_business_city]
         %li
           %span.label Approx sqft of building area used?
-          %span.input #[bpp_business_sqft]
+          %span.input
+            / #[bpp_business_sqft]
 
     .alert.section
       %p If you were out of business in this county on #[taxyear_end_date], please notify the assessor of property of the date out of business  in order to avoid a forced assessment.
 
     / Part 2. Owned Property
-    .section
+    #part-2.section
       %h3.section-title
         Part II. Owned Personal Property
         %span.helper Report all personal property owned by you or held for use in your business/profession as of January 1, including items fully depreciated on your accounting records. Do not report inventories of merchandise held for sale or exchange or finished goods in the hands of the manufacturers. Personal property leased or rented and used in your business must be reported in <u>Part 3</u> on the reverse side of this schedule. Property on which you need to report a Nonstandard value must be reported in <u>Part 4</u> on the reverse side of this schedule and not in this section. <strong>A separate schedule must be filed for each business location.</strong> List the original cost to you for each group below, by year acquired, in the REVISED COST column.  An <strong>Asset Listing</strong> should accompany this schedule. This can be faxed to #[juris_fax] or emailed to #[juris_email].
@@ -616,9 +664,11 @@
     .alert
       %p Print your Name &amp; Title and Sign the Schedule on the Reverse Side
 
+  .page-break
+
   .page
     / Part 3. Leased Property
-    .section
+    #part-3.section
       %table#business-leased-property
         %thead
           %tr
@@ -680,7 +730,7 @@
             %td{:colspan => "4"} If additional space is needed, attach a separate sheet using the same format
 
     / Part 4. Nonstandard Property
-    .section
+    #part-4.section
       #nonstandard-property
         %table#business-nonstandard-property
           %thead
